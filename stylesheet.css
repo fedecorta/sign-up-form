@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'alex_brushregular';
+    src: url('alexbrush-regular-webfont.woff2') format('woff2'),
+         url('alexbrush-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0; 
+  }
+
+
+body{
+    display: flex;
+}
+.background-div {
+    background-image: url('halie-west-25xggax4bSA-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 30%;
+    position: relative;
+}
+
+.logo-background {
+    margin-top: 70px;
+    height: 20%;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+
+.logo-title {
+    font-size: 50px;
+    color: white;
+}
+
+.logo-image{
+    max-width: 80%; 
+    max-height: 80%; 
+    object-fit: contain; 
+}
+
+.banner-text{
+    width: 100%; 
+    text-align: center; 
+    color: white;
+    position: absolute; 
+    bottom: 10px;
+    font-size: 15px;
+}
+
+.banner-text > a {
+    color: white;
+}
+
+.right-banner {
+    width: 70%; 
+  }
+
+form {
+    padding: 40px;
+    background-color: white; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+.form-container {
+    display: flex;
+    gap: 50px;
+    
+}
+
+.right-banner {
+    background-color: rgba(240, 240, 240, 0.5);
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    border-radius: 5px;
+    color: white;
+    background-color: olivedrab;
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.first-section-of-right-banner {
+    padding: 60px 40px;
+    font-size: 12px;
+    max-width: 50%;
+    text-align: justify;
+}
+
+.last-section-of-right-banner {
+    padding: 20px 40px;
+    font-size: 12px;
+    max-width: 60%;
+}
+
+.login-link{
+    color: olivedrab;
+    text-decoration: none;
+}
+
+input{
+    margin-bottom: 20px;
+    border: solid black 1px;
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+input:focus{
+    outline: 2px solid blue;
+}
+
+p{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+input[type="password"]:invalid{
+    border: red 1px solid;
+}

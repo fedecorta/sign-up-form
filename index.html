@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Form</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+    <div class="background-div">
+        <div class="logo-background"> 
+            <img class="logo-image" src="odin-lined.png" alt="odin logo">
+            <h1 class="logo-title">ODIN</h1>
+        </div>
+        <h6 class="banner-text">Photo by Halle West on <a href="#">Unsplash</a></h6>
+    </div>
+
+    <div class="right-banner">
+
+        <div class="first-section-of-right-banner">
+            <h1>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</h1>
+            <h1>You know you want to</h1>
+        </div>
+
+        <form id="myForm" action="#" method="post">
+            <p>Lets do this!</p>
+            <div class="form-container">
+                <div class="left-of-form">
+                    <div>
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <input type="text" id="first_name" name="first_name" required>
+    
+                    <div>
+                        <label for="email">Email</label>
+                    </div>
+                    <input type="email" id="email" name="email" required>
+    
+                    <div>
+                        <label for="password">Password</label>
+                    </div>
+                    <input type="password" id="password" name="password" required>
+                    <div id="password-mismatch-message" style="color: red; display: none;">
+                        *Passwords do not match
+                      </div>
+                </div>
+
+                <div class="right-of-form">
+                    <div>
+                        <label for="last_name">Last Name</label>
+                    </div>
+                    <input type="text" id="last_name" name="last_name" required>
+    
+                    <div>
+                        <label for="tel">Phone Number</label>
+                    </div>
+                    <input type="tel" id="tel" name="tel">
+    
+                    <div>
+                        <label for="confirm-password">Confirm Password</label>
+                    </div>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div> 
+            </div>
+        </form>
+
+        <div class="last-section-of-right-banner">
+            <button type="submit" form="myForm">Create Account</button>
+            <h2>Already have an account? <a class="login-link"href="#">Log in</a></h2>
+        </div>
+
+    </div>
+
+    <script>
+        // Get the elements
+        var password = document.getElementById('password');
+        var confirmPassword = document.getElementById('confirm-password');
+        var mismatchMessage = document.getElementById('password-mismatch-message');
+      
+        // Function to check the password match
+        function validatePassword() {
+          if (password.value !== confirmPassword.value) {
+            mismatchMessage.style.display = 'block';
+          } else {
+            mismatchMessage.style.display = 'none';
+          }
+        }
+      
+        // Event listeners
+        password.onchange = validatePassword;
+        confirmPassword.onkeyup = validatePassword;
+      </script>
+</body>
+
+</html>
